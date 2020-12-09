@@ -25,7 +25,7 @@ io.on('connection', function(socket){
         if (reply == "ERR: No Reply Matched") {
           reply = "BrrBrr, BOT don't know what to say"
         }
-        io.emit('chat message', "BOT : " + reply);
+        socket.emit('chat message', reply);
       });
 
 

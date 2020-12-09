@@ -22,7 +22,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
 
-
 $(function () {
   var socket = io();
   $('form').submit(function(){
@@ -33,7 +32,7 @@ $(function () {
     return false;
   });
   socket.on('chat message', function(msg){
-    $('#messages').append($('<li>').text(msg));
+    $('#messages').append($('<li>').text("BOT: " + msg));
     window.scrollTo(0, document.body.scrollHeight);
   });
 });
