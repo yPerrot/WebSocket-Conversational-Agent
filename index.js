@@ -34,7 +34,6 @@ io.on('connection', function(socket){
 
 bot.loadFile("./brain.rive").then(loading_done).catch(loading_error);
 
-
 function loading_done() {
   console.log("Bot has finished loading!");
 
@@ -43,8 +42,7 @@ function loading_done() {
   });
 
 }
- 
-// It's good to catch errors too!
+
 function loading_error(error, filename, lineno) {
   console.log("Error when loading files: " + error);
 }
